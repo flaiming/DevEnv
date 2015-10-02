@@ -24,10 +24,11 @@ NC='\e[0m'              # No Color
 
 PROMPTCOL=$aqua
 DIRCOL=$yellowb
+GITCOL=$YELLOW
 
 TITLEBAR='\[\e]0;\u@`hostname`\a\]'
 
-export PS1="${TITLEBAR}\[$PROMPTCOL\]\u@`hostname` \[$DIRCOL\]\w \[$aqua\]\$(vcprompt --format-git %b) \$\[$NC\] "
+export PS1="${TITLEBAR}\[$PROMPTCOL\][\u@`hostname`] \[$DIRCOL\]\w \[$GITCOL\]\$(vcprompt --format-git %b) \[$DIRCOL\]\$\[$NC\] "
 # You may uncomment the following lines if you want `ls' to be colorized:
 export LS_OPTIONS='--color=auto'
 eval `dircolors`
